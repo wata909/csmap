@@ -148,6 +148,11 @@
     map.attributionControl.addAttribution("<a href='http://maps.gsi.go.jp/development/ichiran.html'>地理院タイル</a>");
 
     L.control.layers({
+      "火山基本図基図": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png", {
+        minZoom: 15,
+        maxZoom: 18,
+        attribution: "火山基本図基図"
+      }).addTo(map),
       "火山基本図": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png", {
         minZoom: 15,
         maxZoom: 18,
